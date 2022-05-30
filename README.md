@@ -1,2 +1,2 @@
-# javascript-methods-starter-code
-Starter code for Assignment 2 - JavaScript Methods. 
+# javascript-methods-starter-template-code
+Starter template code for Assignment 2 - JavaScript Methods. 
