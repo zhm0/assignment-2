@@ -72,7 +72,37 @@ Array.prototype.myEvery = function(callbackFn) {
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
-  // Place your code here.
+  let currentValue = undefined;
+  let index = 0;
+  const maxLength = this.length;
+
+  while (index < maxLength)
+  {
+    if (this[index] !== undefined)
+    {
+      currentValue = this[index];
+      ++index;
+      break;
+    }
+    ++index;
+  }
+
+  if (currentValue === undefined)
+  {
+    throw TypeError("Reduce of empty array with no initial value");
+  }
+
+  while (index < maxLength)
+  {
+    if (this[index] !== undefined)
+    {
+      currentValue = callbackFn(currentValue, this[index], index, this);
+    }
+
+    ++index;
+  }
+
+  return currentValue;
 };
 
 // INCLUDES //
