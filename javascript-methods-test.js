@@ -31,6 +31,8 @@ console.log(test_array);
 console.log('\n|myFilter Test|');
 const { myFilter } = require('./javascript-methods.js');
 
+//TEST
+
 //Test for 1 parameter
 console.log('\nTest 1:');
 console.log(test_array.filter(x => x > 5));
@@ -51,3 +53,30 @@ console.log(test_array.filter( (x, i, myArray) => myArray[i] * x > 25));
 console.log(test_array); 
 console.log(test_array.myFilter( (x, i, myArray) => myArray[i] * x > 25));
 console.log(test_array);
+
+//myMap Test
+console.log('|myMap Test|');
+const { mySome } = require('./javascript-methods.js');
+
+//TEST
+
+//Test for 1 parameter
+console.log('\nTest 1:');
+console.log(test_array.some(x => x < 3));
+console.log(test_array.some(x => x > 3));
+console.log(test_array.mySome(x => x < 3));
+console.log(test_array.some(x => x > 3));
+
+//Test for 2 parameters
+console.log('\nTest 2:');
+console.log(test_array.some( (x, i) => x + i == 5));
+console.log(test_array.some( (x, i) => x + i != 5));
+console.log(test_array.mySome( (x, i) => x + i == 5));
+console.log(test_array.mySome( (x, i) => x + i != 5));
+
+//Test for 3 parameters
+console.log('\nTest 3:');
+console.log(test_array.some( (x, i, myArray) => myArray[i] * x == 25));
+console.log(test_array.some( (x, i, myArray) => myArray[i] * x != 25));
+console.log(test_array.mySome( (x, i, myArray) => myArray[i] * x == 25));
+console.log(test_array.mySome( (x, i, myArray) => myArray[i] * x != 25));
