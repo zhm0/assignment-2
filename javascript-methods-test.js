@@ -107,3 +107,24 @@ console.log(test_array.every( (x, i, myArray) => myArray[i] * x == 25));
 console.log(test_array.every( (x, i, myArray) => myArray[i] * x != 25));
 console.log(test_array.myEvery( (x, i, myArray) => myArray[i] * x == 25));
 console.log(test_array.myEvery( (x, i, myArray) => myArray[i] * x != 25));
+
+//myReduce Test
+console.log('\n|myReduce Test|');
+const { myReduce } = require('./javascript-methods.js');
+
+//TEST
+
+//Test for 2 parameter
+console.log('\nTest 1:');
+console.log(test_array.reduce((accumulator, currentValue) => accumulator + currentValue));
+console.log(test_array.myReduce((accumulator, currentValue) => accumulator + currentValue));
+
+//Test for 3 parameters
+console.log('\nTest 2:');
+console.log(test_array.reduce((accumulator, currentValue, index) => accumulator + currentValue + index));
+console.log(test_array.myReduce((accumulator, currentValue, index) => accumulator + currentValue + index));
+
+//Test for 4 parameters
+console.log('\nTest 3:');
+console.log(test_array.reduce((accumulator, currentValue, index, array) => accumulator + currentValue + array[index]));
+console.log(test_array.myReduce((accumulator, currentValue, index, array) => accumulator + currentValue + array[index]));
