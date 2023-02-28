@@ -11,8 +11,9 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
   let newArray = [];
-
-  for (let i = 0; i < this.length; ++i)
+  const maxLength = this.length;
+  
+  for (let i = 0; i < maxLength; ++i)
   {
     if (this[i] !== undefined)
     {
@@ -27,10 +28,11 @@ Array.prototype.myMap = function(callbackFn) {
 Array.prototype.myFilter = function(callbackFn) {
   let newArray = [];
   let newArrayIndex = 0;
+  const maxLength = this.length;
 
-  for (let i = 0; i < this.length; ++i)
+  for (let i = 0; i < maxLength; ++i)
   {
-    if (callbackFn(this[i], i, this))
+    if (this[i] !== undefined && callbackFn(this[i], i, this))
     {
       newArray[newArrayIndex] = this[i];
       ++newArrayIndex;
@@ -42,9 +44,10 @@ Array.prototype.myFilter = function(callbackFn) {
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  for (let i = 0; i < this.length; ++i)
+  const maxLength = this.length;
+  for (let i = 0; i < maxLength; ++i)
   {
-    if (callbackFn(this[i], i, this))
+    if (this[i] !== undefined && callbackFn(this[i], i, this))
     {
       return true;
     }
@@ -55,7 +58,16 @@ Array.prototype.mySome = function(callbackFn) {
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  const maxLength = this.length;
+  for (let i = 0; i < maxLength; ++i)
+  {
+    if (this[i] !== undefined && !callbackFn(this[i], i, this))
+    {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 // REDUCE //
