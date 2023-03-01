@@ -3,6 +3,7 @@ console.log('|myMap Test|');
 const { myMap } = require('./javascript-methods.js');
 
 let test_array = [4, 5, , 7, 3, 9];
+test_array.food = "pizza";
 
 //TEST
 //Tests should print out two copies of the same thing
@@ -188,3 +189,18 @@ console.log([NaN].lastIndexOf(NaN));
 console.log([NaN].myLastIndexOf(NaN));
 console.log([2,3,3,5,3].lastIndexOf(3));
 console.log([2,3,3,5,3].myLastIndexOf(3));
+
+//myKeys Test
+console.log('\n|myKeys Test|');
+const { myKeys } = require('./javascript-methods.js');
+
+//TEST
+
+//Test for 1 parameter
+console.log('\nTest 1:');
+console.log(Object.keys(test_array));
+console.log(Object.myKeys(test_array));
+
+const anObj = { 100: "a", 2: "b", 7: "c" };
+console.log(Object.keys(anObj));
+console.log(Object.myKeys(anObj));

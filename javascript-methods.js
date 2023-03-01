@@ -158,7 +158,21 @@ Array.prototype.myLastIndexOf = function(searchElement) {
 
 // KEYS //
 Object.myKeys = function(object) {
-  // Place your code here.
+  keyArray = [];
+  keyArrayIndex = 0;
+
+  for (const i in object)
+  {
+    keyArray[keyArrayIndex] = i;
+
+    if (keyArrayIndex === object.length - 1)
+    {
+      return keyArray;
+    }
+    ++keyArrayIndex;
+  }
+
+  return keyArray;
 };
 
 // VALUES //
