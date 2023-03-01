@@ -177,5 +177,19 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+  keyArray = [];
+  keyArrayIndex = 0;
+
+  for (const i in object)
+  {
+    keyArray[keyArrayIndex] = object[i];
+
+    if (keyArrayIndex === object.length - 1)
+    {
+      return keyArray;
+    }
+    ++keyArrayIndex;
+  }
+
+  return keyArray;
 };

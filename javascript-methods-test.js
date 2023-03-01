@@ -194,6 +194,20 @@ console.log([2,3,3,5,3].myLastIndexOf(3));
 console.log('\n|myKeys Test|');
 const { myKeys } = require('./javascript-methods.js');
 
+const myObj = Object.create(
+    {},
+    {
+      getFoo: {
+        value() {
+          return this.foo;
+        },
+      },
+    },
+  );
+  myObj.foo = "bar";
+
+const anObj = { 100: "a", 2: "b", 7: "c" };
+
 //TEST
 
 //Test for 1 parameter
@@ -201,6 +215,25 @@ console.log('\nTest 1:');
 console.log(Object.keys(test_array));
 console.log(Object.myKeys(test_array));
 
-const anObj = { 100: "a", 2: "b", 7: "c" };
 console.log(Object.keys(anObj));
 console.log(Object.myKeys(anObj));
+
+console.log(Object.keys(myObj));
+console.log(Object.myKeys(myObj));
+
+//myValues Test
+console.log('\n|myValues Test|');
+const { myValues } = require('./javascript-methods.js');
+
+//TEST
+
+//Test for 1 parameter
+console.log('\nTest 1:');
+console.log(Object.values(test_array));
+console.log(Object.myValues(test_array));
+
+console.log(Object.values(anObj));
+console.log(Object.myValues(anObj));
+
+console.log(Object.values(myObj));
+console.log(Object.myValues(myObj));
