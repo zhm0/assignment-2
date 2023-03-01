@@ -3,6 +3,7 @@ console.log('|myMap Test|');
 const { myMap } = require('./javascript-methods.js');
 
 let test_array = [4, 5, , 7, 3, 9];
+
 //TEST
 //Tests should print out two copies of the same thing
 
@@ -137,11 +138,32 @@ const { myIncludes } = require('./javascript-methods.js');
 
 //Test for 1 parameter
 console.log('\nTest 1:');
-console.log(test_array.includes(3));
-console.log(test_array.myIncludes(3));
-console.log(test_array.includes(2));
-console.log(test_array.myIncludes(2));
-console.log([0].includes(-0));
-console.log([0].myIncludes(-0));
-console.log([NaN].includes(NaN));
-console.log([NaN].myIncludes(NaN));
+console.log(test_array.includes(3));            //true
+console.log(test_array.myIncludes(3));          //true
+console.log(test_array.includes(2));            //false
+console.log(test_array.myIncludes(2));          //false
+console.log(test_array.includes(undefined));    //true
+console.log(test_array.myIncludes(undefined));  //true
+console.log([0].includes(-0));                  //true
+console.log([0].myIncludes(-0));                //true
+console.log([NaN].includes(NaN));               //true
+console.log([NaN].myIncludes(NaN));             //true
+
+//myIndexOf Test
+console.log('\n|myIndexOf Test|');
+const { myIndexOf } = require('./javascript-methods.js');
+
+//TEST
+
+//Test for 1 parameter
+console.log('\nTest 1:');
+console.log(test_array.indexOf(3));        
+console.log(test_array.myIndexOf(3));         
+console.log(test_array.indexOf(2));    
+console.log(test_array.myIndexOf(2));
+console.log(test_array.indexOf(undefined));
+console.log(test_array.myIndexOf(undefined));
+console.log([0].indexOf(-0));
+console.log([0].myIndexOf(-0));
+console.log([NaN].indexOf(NaN));
+console.log([NaN].myIndexOf(NaN));
