@@ -107,7 +107,19 @@ Array.prototype.myReduce = function(callbackFn) {
 
 // INCLUDES //
 Array.prototype.myIncludes = function(searchElement) {
-  // Place your code here.
+  for (const i of this)
+  { 
+    if (searchElement === i)
+    {
+      return true;
+    }
+    if (isNaN(i) && isNaN(searchElement))
+    {
+      return true;
+    }
+  }
+
+  return false;
 };
 
 // INDEXOF //

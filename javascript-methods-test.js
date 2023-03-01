@@ -128,3 +128,20 @@ console.log(test_array.myReduce((accumulator, currentValue, index) => accumulato
 console.log('\nTest 3:');
 console.log(test_array.reduce((accumulator, currentValue, index, array) => accumulator + currentValue + array[index]));
 console.log(test_array.myReduce((accumulator, currentValue, index, array) => accumulator + currentValue + array[index]));
+
+//myIncludes Test
+console.log('\n|myIncludes Test|');
+const { myIncludes } = require('./javascript-methods.js');
+
+//TEST
+
+//Test for 1 parameter
+console.log('\nTest 1:');
+console.log(test_array.includes(3));
+console.log(test_array.myIncludes(3));
+console.log(test_array.includes(2));
+console.log(test_array.myIncludes(2));
+console.log([0].includes(-0));
+console.log([0].myIncludes(-0));
+console.log([NaN].includes(NaN));
+console.log([NaN].myIncludes(NaN));
