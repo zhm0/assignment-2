@@ -167,3 +167,24 @@ console.log([0].indexOf(-0));
 console.log([0].myIndexOf(-0));
 console.log([NaN].indexOf(NaN));
 console.log([NaN].myIndexOf(NaN));
+
+//myLastIndexOf Test
+console.log('\n|myLastIndexOf Test|');
+const { myLastIndexOf } = require('./javascript-methods.js');
+
+//TEST
+
+//Test for 1 parameter
+console.log('\nTest 1:');
+console.log(test_array.lastIndexOf(3));        
+console.log(test_array.myLastIndexOf(3));         
+console.log(test_array.lastIndexOf(2));    
+console.log(test_array.myLastIndexOf(2));
+console.log(test_array.lastIndexOf(undefined));
+console.log(test_array.myLastIndexOf(undefined));
+console.log([0].lastIndexOf(-0));
+console.log([0].myLastIndexOf(-0));
+console.log([NaN].lastIndexOf(NaN));
+console.log([NaN].myLastIndexOf(NaN));
+console.log([2,3,3,5,3].lastIndexOf(3));
+console.log([2,3,3,5,3].myLastIndexOf(3));
