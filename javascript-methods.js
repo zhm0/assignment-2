@@ -113,7 +113,7 @@ Array.prototype.myIncludes = function(searchElement) {
     {
       return true;
     }
-    if (isNaN(this[i]) && isNaN(searchElement))
+    if (this[i] !== this[i] && searchElement !== searchElement)
     {
       return true;
     }
@@ -124,7 +124,7 @@ Array.prototype.myIncludes = function(searchElement) {
 
 // INDEXOF //
 Array.prototype.myIndexOf = function(searchElement) {
-  if (isNaN(searchElement))
+  if (searchElement !== searchElement)
   {
     return -1;
   }
@@ -141,11 +141,11 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  if (isNaN(searchElement))
+  if (searchElement !== searchElement)
   {
     return -1;
   }
-  for (let i = this.length; i > -1; --i)
+  for (let i = this.length - 1; i > -1; --i)
   {
     if (this[i] !== undefined && searchElement === this[i])
     {

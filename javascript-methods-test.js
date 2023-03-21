@@ -136,6 +136,20 @@ console.log('\n|myIncludes Test|');
 const { myIncludes } = require('./javascript-methods.js');
 
 //TEST
+console.log([1, 2, 3].includes(2)); // true
+console.log([1, 2, 3].includes(4)); // false
+console.log([1, 2, NaN].includes(NaN)); // true
+console.log([1, 2, 3].myIncludes(2)); // true
+console.log([1, 2, 3].myIncludes(4)); // false
+console.log([1, 2, NaN].myIncludes(NaN)); // true
+console.log([1, 2, "thing"].includes(NaN)); // true
+console.log([1, 2, "thing"].myIncludes(NaN)); // true
+
+function valueIsNaN(v) {
+  return v !== v;
+}
+console.log(valueIsNaN(1)); // false
+console.log(valueIsNaN(NaN)); // true
 
 //Test for 1 parameter
 console.log('\nTest 1:');
